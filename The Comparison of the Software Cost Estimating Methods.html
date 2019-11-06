@@ -1,0 +1,693 @@
+<HTML>
+<HEAD>
+<TITLE>The Comparison of the Software Cost Estimating Methods
+</TITLE>
+<BASE HREF="http://www.cpsc.ucalgary.ca/~wul/SENG621/seng621_11.html">
+</HEAD>
+<BODY>
+<H1><CENTER>The Comparison of the Software Cost Estimating Methods
+<BR>
+</CENTER></H1>
+<P>
+<CENTER><I>Liming Wu <BR>
+</I></CENTER>
+<CENTER><I>University of Calgary <BR>
+</I></CENTER>
+<CENTER><I>Email:wul@cpsc.ucalgary.ca <BR>
+</I></CENTER>
+<HR>
+<H2>Abstract</H2>
+<P>
+Practitioners have expressed concern over their inability to estimate
+accurately costs associated with software development. This concern
+has become even more pressing as cost associated development continue
+to increase. Considerable studies are now directed at 
+constructing ,evaluating and selecting better software cost estimation
+models and tools for specific software development projects. This essay 
+gives an overview of cost estimation 
+models and then discusses their advantages and disadvantages.
+Finally, the guidelines for selecting appropriate cost estimation
+models are given and a combination method is recommended.
+<P>
+Table of contents
+<UL>
+<LI><A HREF="#1">1. Introduction</A> 
+<LI><A HREF="#2">2. Expert Judgment methods</A> 
+<LI><A HREF="#3">3. Estimating by analogy methods</A> 
+<LI><A HREF="#4">4. Top-down methods and Bottom-up methods</A>
+<UL>
+<LI><A HREF="#41">4.1 Top-down methods</A>
+<LI><A HREF="#42">4.2 Bottom-up methods</A>
+</UL>
+<LI><A HREF="#5">5. Algorithmic methods</A> 
+<UL>
+<LI><A HREF="#51">5.1 General discussion</A>
+<LI><A HREF="#52">5.2 COCOMO model</A>
+<LI><A HREF="#53">5.3 Putnam model</A>
+<LI><A HREF="#54">5.4 Function point based models</A>
+</UL>
+<LI>6. <A HREF="#6">The selection and use of cost estimation methods</A>
+<UL>
+<LI><A HREF="#61">6.1 The selection of cost estimation methods</A>
+<LI><A HREF="#62">6.2 Use of cost estimation methods</A>
+<LI><A HREF="#63">6.3 Model calibration</A>
+</UL>
+<LI><A HREF="#7">7. Conclusions</A> 
+<LI><A HREF="#8">References</A> 
+</UL>
+<HR>
+<H2><A NAME="1">1. Introduction</A></H2>
+<P>
+It has been surveyed that nearly one-third projects overrun their
+budget and late delivered and two-thirds of all major projects
+substantially overrun their original estimates. The accurate prediction
+of software development costs is a critical issue to make the
+good management decisions and accurately determining how much
+effort and time a project required for both project managers as
+well as system analysts and developers. Without reasonably accurate
+cost estimation capability, project managers can not determine
+how much time and manpower cost the project should take and that
+means the software portion of the project is out of control from
+its beginning; system analysts can not make realistic hardware-software
+tradeoff analyses during the system design phase; software project
+personnel can not tell managers and customers that their proposed
+budget and schedule are unrealistic. This may lead to optimistic
+over promising on software development and the inevitable overruns
+and performance compromises as a consequence. But, actually huge
+overruns resulting from inaccurate estimates are believed to occur
+frequently. <BR>
+<P>
+The overall process of developing a cost estimate for software
+is not different from the process for estimating any other element
+of cost. There are, however, aspects of the process that are peculiar
+to software estimating. Some of the unique aspects of software
+estimating are driven by the nature of software as a product.
+Other problems are created by the nature of the estimating methodologies.
+Software cost estimation is a continuing activity which starts
+at the proposal stage and continues through the lift time of a
+project. Continual cost estimation is to ensure that the spending
+is in line with the budget.<BR>
+<P>
+Cost estimation is one of the most challenging tasks in project
+management. It is to accurately estimate needed resources and
+required schedules for software development projects. The software
+estimation process includes estimating the size of the software
+product to be produced, estimating the effort required, developing
+preliminary project schedules, and finally, estimating overall
+cost of the project.<BR>
+<P>
+It is very difficult to estimate the cost of software development.
+Many of the problems that plague the development effort itself
+are responsible for the difficulty encountered in estimating that
+effort. One of the first steps in any estimate is to understand
+and define the system to be estimated. Software, however, is intangible,
+invisible, and intractable. It is inherently more difficult to
+understand and estimate a product or process that cannot be seen
+and touched. Software grows and changes as it is written. When
+hardware design has been inadequate, or when hardware fails to
+perform as expected, the &quot;solution&quot; is often attempted
+through changes to the software. This change may occur late in
+the development process, and sometimes results in unanticipated
+software growth. <BR>
+<P>
+After 20 years research, there are many software cost estimation
+methods available including algorithmic methods, estimating by
+analogy, expert judgment method, price to win method, top-down
+method, and bottom-up method. No one method is necessarily better
+or worse than the other, in fact, their strengths and weaknesses
+are often complimentary to each other. To understand their strengths
+and weaknesses is very important when you want to estimate your
+projects.<BR>
+<HR>
+<H2><A NAME="2">2.Expert Judgment Method</A><BR>
+</H2>
+<P>
+Expert judgment techniques involve consulting with software cost
+estimation expert or a group of the experts to use their experience
+and understanding of the proposed project to arrive at an estimate
+of its cost.<BR>
+<P>
+Generally speaking, a group consensus technique, Delphi technique,
+is the best way to be used. The strengths and weaknesses are complementary
+to the strengths and weaknesses of algorithmic method.<BR>
+<P>
+To provide a sufficiently broad communication bandwidth for the
+experts to exchange the volume of information necessary to calibrate
+their estimates with those of the other experts, a wideband Delphi
+technique is introduced over standard Deliphi technique.<BR>
+<P>
+The estimating steps using this method:
+<OL>
+<LI>Coordinator present each expert with a specification and an
+estimation form.
+<LI>Coordinator calls a group meeting in which the experts discuss
+estimation issues with the coordinator and each other.
+<LI>Experts fill out forms anonymously
+<LI>Coordinator prepares and distributes a summary of the estimation
+on an iteration form.
+<LI>Coordinator calls a group meeting, specially focusing on having
+the experts discuss points where their estimates varied widely.
+<LI>Experts fill out forms, again anonymously, and steps 4 and
+6 are iterated for as many rounds as appropriate.
+</OL>
+<P>
+The wideband Delphi Technique has subsequently been used in a
+number of studies and cost estimation activities. It has been
+highly successful in combining the free discuss advantages of
+the group meeting technique and advantage of anonymous estimation
+of the standard Delphi Technique.<BR>
+<P>
+The advantages of this method are:
+<UL>
+<LI>The experts can factor in differences between past project
+experience and requirements of the proposed project.
+<LI>The experts can factor in project impacts caused by new technologies,
+architectures, applications and languages involved in the future
+project and can also factor in exceptional personnel characteristics
+and interactions, etc.
+</UL>
+<P>
+The disadvantages include:
+<UL>
+<LI>This method can not be quantified. 
+<LI>It is hard to document the factors used by the experts or
+experts-group. 
+<LI>Expert may be some biased, optimistic, and pessimistic, even
+though they have been decreased by the group consensus. 
+<LI>The expert judgment method always compliments the other cost
+estimating methods such as algorithmic method. 
+</UL>
+<HR>
+<H2><A NAME="3">3. Estimating by Analogy</A></H2>
+<P>
+Estimating by analogy means comparing the proposed project to
+previously completed similar project where the project development
+information id known. Actual data from the completed projects
+are extrapolated to estimate the proposed project. This method
+can be used either at system-level or at the component-level.
+<BR>
+<P>
+Estimating by analogy is relatively straightforward. Actually
+in some respects, it is a systematic form of expert judgment since
+experts often search for analogous situations so as to inform
+their opinion.<BR>
+<P>
+The steps using estimating by analogy are:
+<OL>
+<LI>Characterizing the proposed project. 
+<LI>Selecting the most similar completed projects whose characteristics
+have been stored in the historical data base. 
+<LI>Deriving the estimate for the proposed project from the most
+similar completed projects by analogy. 
+</OL>
+<P>
+The main advantages of this method are:
+<OL>
+<LI>The estimation are based on actual project characteristic
+data. 
+<LI>The estimator's past experience and knowledge can be used
+which is not easy to be quantified. 
+<LI>The differences between the completed and the proposed project
+can be identified and impacts estimated. 
+</OL>
+<P>
+However there are also some problems with this method, 
+<OL>
+<LI>Using this method, we have to determine how best to describe
+projects. The choice of variables must be restricted to information
+that is available at the point that the prediction required. Possibilities
+include the type of application domain, the number of inputs,
+the number of distinct entities referenced, the number of screens
+and so forth. 
+<LI>Even once we have characterized the project, we have to determine
+the similarity and how much confidence can we place in the analogies.
+Too few analogies might lead to maverick projects being used;
+too many might lead to the dilution of the effect of the closest
+analogies. Martin Shepperd etc. introduced the method of finding
+the analogies by measuring Euclidean distance in n-dimensional
+space where each dimension corresponds to a variable. Values are
+standardized so that each dimension contributes equal weight to
+the process of finding analogies. Generally speaking, two analogies
+are the most effective. 
+<LI>Finally, we have to derive an estimate for the new project
+by using known effort values from the analogous projects. Possibilities
+include means and weighted means which will give more influence
+to the closer analogies.
+</OL>
+<P>
+It has been estimated that estimating by analogy is superior technique
+to estimation via algorithmic model in at least some circumstances.
+It is a more intuitive method so it is easier to understand the
+reasoning behind a particular prediction..
+<HR>
+<H2><A NAME="4">4. Top-Down and Bottom-Up Methods</A></H2>
+<H4><A NAME="41">4.1 Top-Down Estimating Method</A></H4>
+<P>
+Top-down estimating method is also called Macro Model. Using top-down
+estimating method, an overall cost estimation for the project
+is derived from the global properties of the software project,
+and then the project is partitioned into various low-level components.
+The leading method using this approach is Putnam model. This method
+is more applicable to early cost estimation when only global properties
+are known. In the early phase of the software development, It
+is very useful because there are no detailed information available.
+<BR>
+<P>
+The advantages of this method are:
+<UL>
+<LI>It focuses on system-level activities such as integration,
+documentation, configuration management, etc., many of which may
+be ignored in other estimating methods and it will not miss the
+cost of system-level functions. 
+<LI>It requires minimal project detail, and it is usually faster,
+easier to implement. 
+</UL>
+<P>
+The disadvantages are:
+<UL>
+<LI>It often does not identify difficult low-level problems that
+are likely to escalate costs and sometime tends to overlook low-level
+components. 
+<LI>It provides no detailed basis for justifying decisions or
+estimates. 
+</UL>
+<P>
+Because it provides a global view of the software project, it
+usually embodies some effective features such as cost-time trade
+off capability that exists in Putnam model. <BR>
+<H4><A NAME="42">4.2 Bottom-up Estimating Method</A></H4>
+<P>
+Using bottom-up estimating method, the cost of each software components
+is estimated and then combine the results to arrive at an estimated
+cost of overall project. It aims at constructing the estimate
+of a system from the knowledge accumulated about the small software
+components and their interactions. The leading method using this
+approach is COCOMO's detailed model. <BR>
+<P>
+The advantages:
+<UL>
+<LI>It permits the software group to handle an estimate in an
+almost traditional fashion and to handle estimate components for
+which the group has a feel.
+<LI>It is more stable because the estimation errors in the various
+components have a chance to balance out.
+</UL>
+<P>
+The disadvantages:
+<UL>
+<LI>It may overlook many of the system-level costs (integration,
+configuration management, quality assurance, etc.) associated
+with software development. 
+<LI>It may be inaccurate because the necessary information may
+not available in the early phase. 
+<LI>It tends to be more time-consuming. 
+<LI>It may not be feasible when either time and personnel are
+limited.
+</UL>
+<HR>
+<H2><A NAME="5">5. Algorithmic Method</A></H2>
+<H4><A NAME="51">5.1 General discussion</A></H4>
+<P>
+The algorithmic method is designed to provide some mathematical
+equations to perform software estimation. These mathematical equations
+are based on research and historical data and use inputs such
+as Source Lines of Code (SLOC), number of functions to perform,
+and other cost drivers such as language, design methodology, skill-levels,
+risk assessments, etc. The algorithmic methods have been largely
+studied and there are a lot of models have been developed, such
+as <A HREF="http://www.softstarsystems.com/"> COCOMO models</A>, 
+<A HREF="http://ksi.cpsc.ucalgary.ca/courses/451-96/mildred/451/CostEffort.html"> Putnam model</A>,
+and function points based models. <BR>
+<P>
+General advantages:
+<OL>
+<LI>It is able to generate repeatable estimations. 
+<LI>It is easy to modify input data, refine and customize formulas.
+<LI>It is efficient and able to support a family of estimations
+or a sensitivity analysis. 
+<LI>It is objectively calibrated to previous experience.
+</OL>
+<P>
+General disadvantages:
+<OL>
+<LI>.It is unable to deal with exceptional conditions, such as
+exceptional personnel in any software cost estimating exercises,
+exceptional teamwork, and an exceptional match between skill-levels
+and tasks. 
+<LI>Poor sizing inputs and inaccurate cost driver rating will
+result in inaccurate estimation. 
+<LI>Some experience and factors can not be easily quantified.
+</OL>
+<HR>
+<H4><A NAME="52">5.2 <A HREF="http://www.softstarsystems.com/"> COCOMO Models</A></A></H4>
+<P>
+One very widely used algorithmic software cost model is the Constructive
+Cost Model (COCOMO). The <A HREF="http://www.softstarsystems.com/">
+basic COCOMO model </A>has a very simple form:<BR>
+<P>
+MAN-MONTHS = K1* <math>(Thousands of Delivered Source Instructions)
+<sup>K2</sup></math> 
+<P>
+Where K1 and K2 are two parameters dependent on the application
+and development environment. <BR>
+<P>
+Estimates from the basic COCOMO model can be made more accurate
+by taking into account other factors concerning the required characteristics
+of the software to be developed, the qualification and experience
+of the development team, and the software development environment.
+Some of these factors are:
+<P>
+Complexity of the software 
+<OL>
+<LI>Required reliability 
+<LI>Size of data base 
+<LI>Required efficiency (memory and execution time) 
+<LI>Analyst and programmer capability 
+<LI>Experience of team in the application area 
+<LI>Experience of team with the programming language and computer
+<LI>Use of tools and software engineering practices
+</OL>
+<P>
+Many of these factors affect the person months required by an
+order of magnitude or more. COCOMO assumes that the system and
+software requirements have already been defined, and that these
+requirements are stable. This is often not the case. <P>
+<p>
+COCOMO model is a regression model. It is based on the analysis of 63 
+selected projects. The primary input is KDSI. The problems are:
+<ol>
+<li>In early phase of system life-cycle, the size is estimated with great 
+uncertainty value. So, the accurate cost estimate can not be arrived at.
+<li>The cost estimation equation is derived from the analysis of 63 selected
+projects. It usually have some problems outside of its particular environment.
+For this reason, the recalibration is necessary.
+</ol>
+<em>According to Kemerer's research, the average error for all versions of the model 
+is 601%.</em> The detailed model and Intermediate model seem not much better than basic model.
+<p>
+The first version of COCOMO model was originally developed in
+1981. Now, it has been experiencing increasing difficulties in
+estimating the cost of software developed to new life cycle processes
+and capabilities including rapid-development process model, reuse-driven
+approaches, object-oriented approaches and software process maturity
+initiative.<BR>
+<P>
+For these reasons, The newest version, <A HREF="http://sunset.usc.edu/COCOMOII/Cocomo.html">COCOMO 2.0,</A>
+was developed. The major new modeling capabilities of <A HREF="http://sunset.usc.edu/COCOMOII/Cocomo.html">COCOMO 2.0 </A>are
+a tailorable family of software size models, involving object
+points, function points and source lines of code; nonlinear models
+for software reuse and reengineering; an exponent-driver approach
+for modeling relative software diseconomies of scale; and several
+additions, deletions, and updates to previous COCOMO effort-multiplier
+cost drivers. This new model is also serving as a framework for
+an extensive current data collection and analysis effort to further
+refine and calibrate the model's estimation capabilities.<BR>
+<HR>
+<H4><A NAME="53">5.3 <A HREF="http://ksi.cpsc.ucalgary.ca/courses/451-96/mildred/451/CostEffort.html">
+ Putnam model</A></A><BR>
+<BR>
+</H4>
+<P>
+Another popular software cost model is the Putnam model. The form
+of this model is: <BR>
+<BR>
+Technical constant C= size * <math>B<sup>1/3</sup></math> *
+ <math>T<sup>4/3</sup></math> <BR>
+<P>
+Total Person Months B=<math><box>1/T</box><sup>4</sup></math>
+ *<math><box>(size/C)</box><sup>3</sup></math> 
+<P>
+T= Required Development Time in years
+<P>
+Size is estimated in LOC<BR>
+<P>
+Where: C is a parameter dependent on the development environment
+and It is determined on the basis of historical data of the past
+projects.
+<P>
+Rating: C=2,000 (poor), C=8000 (good) C=12,000 (excellent).
+<P>
+The Putnam model is very sensitive to the development time: decreasing
+the development time can greatly increase the person-months needed
+for development.<BR>
+<P>
+One significant problem with the PUTNAM model is that it is
+based on knowing, or being able to estimate accurately, the size
+(in lines of code) of the software to be developed. There is often
+great uncertainty in the software size. It may result in the inaccuracy of
+cost estimation.<em> According to Kemerer's research, the error percentage of SLIM,
+a Putnam model based method,is 772.87%.</em>
+
+<HR>
+<H4><A NAME="54">5.4 Function Point Analysis Based Methods</A>
+</H4>
+<P>
+From above two algorithmic models, we found they require the estimators
+to estimate the number of SLOC in order to get man-months and
+duration estimates. The Function Point Analysis is another method
+of quantifying the size and complexity of a software system in
+terms of the functions that the systems delivers to the user.
+A number of proprietary models for cost estimation have adopted
+a function point type of approach, such as <A HREF="http://www.cpsc.ucalgary.ca/local_interest/class_info/451/CostEffort.html#RTFToC10" >ESTIMACS</A>
+and <A HREF="http://www.cpsc.ucalgary.ca/local_interest/class_info/451/CostEffort.html#RTFToC10" >SPQR/20</A>.
+<BR>
+<P>
+The function point measurement method was developed by Allan Albrecht
+at IBM and published in 1979. He believes function points offer
+several significant advantages over SLOC counts of size measurement.
+There are two steps in counting function points:
+<MENU>
+<LI>Counting the user functions. The raw function counts are arrived
+at by considering a linear combination of five basic software
+components: external inputs, external outputs, external inquiries,
+logic internal files, and external interfaces, each at one of
+three complexity levels: simple, average or complex.. .The sum
+of these numbers, weighted according to the complexity level,
+is the number of function counts (FC). 
+<LI>Adjusting for environmental processing complexity. The final
+function points is arrived at by multiplying FC by an adjustment
+factor that is determined by considering 14 aspects of processing
+complexity. This adjustment factor allows the FC to be modified
+by at most 35% or -35%.
+</MENU>
+<P>
+The collection of function point data has two primary motivations.
+One is the desire by managers to monitor levels of productivity.
+Another use of it is in the estimation of software development
+cost.<BR>
+<P>
+There are some cost estimation methods which are based on a function
+point type of measurement, such as ESTIMACS and SPQR/20. SPQR/20
+is based on a modified function point method. Whereas traditional
+function point analysis is based on evaluating 14 factors, SPQR/20
+separates complexity into three categories: complexity of algorithms,
+complexity of code, and complexity of data structures. ESTIMACS
+is a propriety system designed to give development cost estimate
+at the conception stage of a project and it contains a module
+which estimates function point as a primary input for estimating
+cost.<BR>
+<P>
+The advantages of function point analysis based model are:
+<OL>
+<LI>function points can be estimated from requirements specifications
+or design specifications, thus making it possible to estimate
+development cost in the early phases of development.
+<LI>function points are independent of the language, tools, or
+methodologies used for implementation.
+<LI>non-technical users have a better understanding of what function
+points are measuring since function points are based on the system
+user's external view of the system
+</OL>
+<i>From Kemerer's research, the mean error percentage of ESTIMACS is only 85.48%.
+So, considering the 601% with COCOMO and 771% with SLIM, I think the Function 
+Point based cost estimation methods is the better approach  especially in the 
+early phases of development.</i>
+
+<HR>
+<H2><A NAME="6">6. The Selection and Use of Estimation Methods</A>
+</H2>
+<H4><A NAME="61">6.1 The selection of Estimation methods</A>
+</H4>
+<P>
+From the above comparison, we know no one method is necessarily
+better or worse than the other, in fact, their strengths and weaknesses
+are often complimentary to each other. According to the experience,
+it is recommended that a combination of models and analogy or
+expert judgment estimation methods is useful to get reliable,
+accurate cost estimation for software development.<BR>
+<P>
+<em>For known projects and projects parts, we should use expert
+judgment method or analogy method if the similarities of them
+can be got, since it is fast and under these circumstance, reliable;
+For large, lesser known projects, it is better to use algorithmic
+model. In this case, many researchers recommend the estimation
+models that do not required SLOC as an input. I think <A HREF="http://sunset.usc.edu/COCOMOII/Cocomo.html"><I>COCOMO2.0</I></A>
+is the first candidate because COCOMO2.0 model not only can use
+Source lines of code (SLOC) but also can use Object points, unadjusted
+function points as metrics for sizing a project. If we approach
+cost estimation by parts, we may use expert judgment for some
+known parts. This way we can take advantage of both: the rigor
+of models and the speed of expert judgment or analogy. Because
+the advantages and disadvantages of each technique are complementary,
+a combination will reduce the negative effect of any one technique,
+augment their individual strengths and help to cross-check one
+method against another.<BR>
+</em>
+<H4><A NAME="62">6.2 Use of Estimation Methods</A><BR>
+</H4>
+<P>
+It is very common that we apply some cost estimation methods to
+estimate the cost of software development. But what we have to
+note is that it is very important to continually re-estimate cost
+and to compare targets against actual expenditure at each major
+milestone. This keeps the status of the project visible and helps
+to identify necessary corrections to budget and schedule as soon
+as they occur.<BR>
+<P>
+At every estimation and re-estimation point, iteration is an important
+tool to improve estimation quality. The estimator can use several
+estimation techniques and check whether their estimates converge.
+The other advantages are as following:
+<UL>
+<LI>Different estimation methods may use different data. This
+results in better coverage of the knowledge base for the estimation
+process. It can help to identify cost components that cannot be
+dealt with or were overlooked in one of the methods
+<LI>Different viewpoints and biases can be taken into account
+and reconciled. A competitive contract bid, a high business priority
+to keep costs down, or a small market window with the resulting
+tight deadlines tends to have optimistic estimates. A production
+schedule established by the developers is usually more on the
+pessimistic side to avoid committing to a schedule and budget
+one cannot meet.
+</UL>
+<P>
+It is also very important to compare actual cost and time to the
+estimates even if only one or two techniques are used. It will
+also provide the necessary feedback to improve the estimation
+quality in the future. Generally, the historical data base for
+cost estimation should be set up for future use.<BR>
+<P>
+Identifying the goals of the estimation process is very important
+because it will influence the effort spent in estimating, its
+accuracy, and the models used. Tight schedules with high risks
+require more accurate estimates than loosely defined projects
+with a relatively open-ended schedule. The estimators should look
+at the quality of the data upon which estimates are based and
+at the various objectives.<BR>
+<H4><A NAME="63">6.3 Model Calibration</A></H4>
+<P>
+The act of calibration standardizes a model. Many model are developed
+for specific situations and are, by definition, calibrated to
+that situation. Such models usually are not useful outside of
+their particular environment. So, the act of calibration is needed
+to increase the accuracy of one of these general models by making
+it temporarily a specific model for whatever product it has been
+calibrated for. Calibration is in a sense customizing a generic
+model. Items which can be calibrated in a model include: product
+types, operating environments, labor rates and factors, various
+relationships between functional cost items, and even the method
+of accounting used by a contractor. All general models should
+be standardized (i.e. calibrated), unless used by an experienced
+modeler with the appropriate education, skills and tools, and
+experience in the technology being modeled.<BR>
+<P>
+Calibration is the process of determining the deviation from a
+standard in order to compute the correction factors. For cost
+estimating models, the standard is considered historical actual
+costs. The calibration procedure is theoretically very simple.
+It is simply running the model with normal inputs (known parameters
+such as software lines of code) against items for which the actual
+cost are known. These estimates are then compared with the actual
+costs and the average deviation becomes a correction factor for
+the model. In essence, the calibration factor obtained is really
+good only for the type of inputs that were used in the calibration
+runs. For a general total model calibration, a wide range of components
+with actual costs need to be used. Better yet, numerous calibrations
+should be performed with different types of components in order
+to obtain a set of calibration factors for the various possible
+expected estimating situations.
+<HR>
+<H2><A NAME="7">7. Conclusions</A></H2>
+<P>
+The accurate prediction of software development costs is a critical
+issue to make the good management decisions and accurately determining
+how much effort and time a project required for both project managers
+as well as system analysts and developers. There are many software
+cost estimation methods available including algorithmic methods,
+estimating by analogy, expert judgment method, top-down method,
+and bottom-up method. No one method is necessarily better or worse
+than the other, in fact, their strengths and weaknesses are often
+complimentary to each other. To understand their strengths and
+weaknesses is very important when you want to estimate your projects.
+<BR>
+<P>
+For a specific project to be estimated, which estimation methods
+should be used depend on the environment of the project. According
+to the weaknesses and strengths of the methods, you can choose
+some methods to be used. I think a combination of the expert judgment
+or analogy method and COCOMO2.0 is the best approach that you
+can choose. For known projects and projects parts, we should use
+expert judgment method or analogy method if the similarities of
+them can be got, since it is fast and under these circumstance,
+reliable; For large, lesser known projects, it is better to use
+algorithmic model like COCOMO2.0 which will be available in early
+1997. If COCOMO2.0 is not available, ESTIMACS or the other function
+point based methods are highly recommended especially in the early
+phase of the software life-cycle because in the early phase of
+software life-cycle SLOC based methods have great uncertainty
+values of size. If there are many great uncertainty values of
+size, reuse, cost drivers etc., the analogous method or wide-band
+Delphi technology should be considered as the first candidate.
+And , the COCOMO 2.0 has capabilities to deal with the current
+software process and is served as a framework for an extensive
+current data collection and analysis effort to further refine
+and calibrate the model's estimation capabilities. In general,
+the COCOMO2.0 will be very popular. Now Dr. Barry Boehm and his
+students are developing COCOMO2.0. They expect to have it calibrated
+and usable in early 1997. <BR>
+<P>
+Some recommendations: 
+<OL>
+<LI>Do not depend on a single cost or schedule estimate. 
+<LI>Use several estimating techniques or cost models, compare
+the results, and determine the reasons for any large variations.
+<LI>Document the assumptions made when making the estimates. 
+<LI>Monitor the project to detect when assumptions that turn out
+to be wrong jeopardize the accuracy of the estimate. 
+<LI>Improve software process: An effective software process can
+be used to increase accuracy in cost estimation in a number of
+ways. 
+<LI>Maintaining a historical database<BR>
+</OL>
+<HR>
+<H2><A NAME="8">References:</A><BR>
+</H2>
+<OL>
+<LI>Bernard L. &quot;<B>Cost Estimation For Software Development</B>&quot;,
+Addision_Wesley, 1987 
+<LI>Boehm, B.W. &quot;<B>Software Engineering Economics</B>&quot;,
+Prentice_Hall, 1981 
+<LI>Shepperd,M. &quot;<B>Effort Estimation Using Analogy</B>&quot;,
+IEEE,1996 
+<LI>Kemerer, C.F. &quot;<B>An Empirical Validation of Software
+Cost Estimation Models</B>&quot;, CACM, May 1987 
+<LI>Albrechet, A.J. etc. &quot;<B>Software Function, Source Lines
+of Code, and Development Effort Prediction: A Software Science
+Validation</B>&quot;, IEEE on Software Engineering, NOV 1983 
+<LI>Albert L. Lederer and Jayesh Prasad &quot;<B>Nine Management
+Guidelines for Better Cost Estimating</B>&quot;, CACM,Vol.35,No.2,
+Feb 1992
+<LI>Boehm, B.W. &quot;<A HREF="http://sunset.usc.edu/COCOMOII/Cocomo.html">An Overview of COCOMO2.0 Software Cost Model </A>&quot;
+<LI>Shaw, M L.G. &quot;
+<A HREF="http://ksi.cpsc.ucalgary.ca/courses/451-96/mildred/451/CostEffort.html">
+Lecture Notes on Software Cost Estimation Model</A>&quot;
+<LI>SoftStar System Co. &quot;<A HREF="http://www.softstarsystems.com/">
+COCOMO Model and SoftStar System</A>&quot;
+</OL>
+<HR>
+<P>
+<A HREF="mailto:wul@cpsc.ucalgary.ca">wul@cpsc.ucalgary.ca  </A> 
+<I><FONT SIZE=3> 4-Mar-97</FONT></I>
+</BODY>
+</HTML>
